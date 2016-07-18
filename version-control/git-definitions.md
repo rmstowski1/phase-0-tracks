@@ -12,7 +12,7 @@ A branch is a movable pointer to a commit. I would use one so i can change my co
 
 * What is a commit? What makes a good commit message?
 
-A commit is a description of what you changed in a repository. A good commit message should clearly explain what you changed.
+A commit is a description of what you changed in a repository.
 
 * What is a merge conflict?
 
