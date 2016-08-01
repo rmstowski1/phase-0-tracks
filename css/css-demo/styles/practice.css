@@ -13,3 +13,8 @@ section.job{
 section.list{
 	font-size: .8em;
 }
+
+a:hover has to come after a:link and a:visited in order to work.
+
+ul > li
+use the greater than symbol to select which child element you want.
