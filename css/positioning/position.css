@@ -1,0 +1,19 @@
+.octo{
+	position: relative;
+	text-align: center;
+	bottom: -125px;
+}
+
+.hat{
+	position: relative;
+	text-align: center;
+	top: -240px;
+	right: -15px;
+}
+
+.glass{
+	position: relative;
+	text-align: center;
+	top: -239px;
+	right: -5px;
+}

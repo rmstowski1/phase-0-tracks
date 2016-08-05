@@ -12,6 +12,7 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+
 }
 
 /* you're welcome to edit the
@@ -26,7 +27,22 @@ figure {
   margin-right: 0px;
 }
 
+
 figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body{
+  width: 960px;
+}
+
+.external-links{
+  width: 200px;
+  display: block;
+}
+ 
+main{
+  width: 756px;
+ }
+
