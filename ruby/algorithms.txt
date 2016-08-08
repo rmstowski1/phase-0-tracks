@@ -1,0 +1,14 @@
+- For each button on the panel:
+	- Compare it to the floor you want to arrive at.
+		- If it matches, press the button.
+		- Wait to arrive.
+	- If it doesn’t match:
+		- Don’t press button.
+
+
+Cleaning bedroom
+- Walk into room:
+	- If room is messy:
+		- Clean room.
+	- If room is clean:
+		- Relax.

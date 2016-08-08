@@ -6,11 +6,13 @@ blockquote {
 
 cite {
   display: block;
+  padding: 5px;
   margin-top: 10px;
 }
 
 #external-links ul {
   list-style-type: none;
+  padding: 5px;
   padding-left: 0px;
 
 }
@@ -19,10 +21,12 @@ cite {
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
 img {
+  padding: 5px;
   width: 100%;
 }
 
 figure {
+  padding: 5px;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -30,19 +34,31 @@ figure {
 
 figcaption {
   font-style: italic;
+  padding: 5px;
   text-align: right;
 }
 
 body{
-  width: 960px;
+  max-width: 960px;
+  padding: 5px;
+
 }
 
 .external-links{
-  width: 200px;
-  display: block;
+  width: 20%;
+  display: inline-block;
+  position: relative;
+  right: -200px;
+  padding: 5px;
+  
 }
  
-main{
-  width: 756px;
+ main{
+  width: 50%;
+  position: relative;
+  right: -310px;
+  top: -125px;
+  padding: 5px;
  }
+
 
