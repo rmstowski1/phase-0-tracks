@@ -1,28 +1,41 @@
+body{
+  max-width: 960px;
+  min-width: 50px;
+  padding: 5px;
+  margin: auto;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
   margin-left: 0px;
+  min-width: 20%;
 }
 
 cite {
   display: block;
   padding: 5px;
   margin-top: 10px;
+  min-width: 20%;
 }
 
 #external-links ul {
   list-style-type: none;
-  padding: 5px;
+  padding: 15px;
   padding-left: 0px;
-
+  min-width: 20%;
 }
 
+h1{
+  padding: 5px;
+}
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
 img {
   padding: 5px;
   width: 100%;
+  min-width: 20%;
 }
 
 figure {
@@ -38,27 +51,40 @@ figcaption {
   text-align: right;
 }
 
-body{
-  max-width: 960px;
-  padding: 5px;
-
-}
-
-.external-links{
-  width: 20%;
+#external-links{
+  position: static;
   display: inline-block;
-  position: relative;
-  right: -200px;
+  width: 20%;
   padding: 5px;
-  
 }
  
  main{
-  width: 50%;
-  position: relative;
-  right: -310px;
-  top: -125px;
-  padding: 5px;
+  position: static;
+  display: inline-block;
+  width: 75%;
+ }
+
+ main, #external-links {
+  display:inline-block; vertical-align: top;
+ }
+
+ @media only screen and (max-width: 500px) {
+  body{
+    background-color: hotpink;
+  }
+
+ }
+
+ @media only screen and (max-width: 500px) {
+  h1{
+    font-size: 15pt;
+  }
+ }
+
+ @media only screen and (max-width: 500px){
+  main{
+    width: 75%;
+  }
  }
 
 
