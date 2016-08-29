@@ -50,13 +50,11 @@ def delete_item(list_name, item_name)
 end
 
 def update_quantity(list_name, item_name, new_num)
-	num = 0
-	until num == list_name.length+5
-		if list_name[:item_name][num] == item_name
-			list_name[:item_quant][num] = new_num
+	list_name.each { |key, value|
+		if key == item_name
+			list_name[key] = new_num
 		end
-		num += 1
-	end
+	}
 	list_name
 end
 
@@ -79,8 +77,8 @@ print_list(groc_list)
 
 puts "-----------------------------------------"
 
-/groc_list = update_quantity(groc_list, "Ice Cream", 2)
-print_list(groc_list) */
+groc_list = update_quantity(groc_list, "Ice Cream", 2)
+print_list(groc_list)
 
 puts "-----------------------------------------"
 
