@@ -13,7 +13,8 @@ class TodoList
 	end
 
 	def delete_item(item)
-
+		@chore_arr.delete_if {|val| val == item}
+		p @chore_arr
 	end
 
 	def get_item(x)
