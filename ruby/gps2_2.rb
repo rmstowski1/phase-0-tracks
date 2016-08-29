@@ -41,8 +41,7 @@ def make_list
 end
 
 def add_item(list_name, item_name, new_num)
-	list_name[:item_name] << item_name
-	list_name[:item_quant]  << new_num
+	list_name[item_name] = new_num
 	list_name
 end
 
@@ -91,13 +90,13 @@ print_list(groc_list)
 
 puts "-----------------------------------------"
 
-groc_list = update_quantity(groc_list, "Ice Cream", 2)
+/groc_list = update_quantity(groc_list, "Ice Cream", 2)
 print_list(groc_list)
 
 puts "-----------------------------------------"
 
 groc_list = delete_item(groc_list, "Lemonade")
-print_list(groc_list) 
+print_list(groc_list) */
 
 
 #What did you learn about pseudocode from working on this challenge?
