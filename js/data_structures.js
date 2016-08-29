@@ -21,3 +21,21 @@ console.log("");
 
 console.log(colored_horses["Ed"]);
 console.log(colored_horses["Lex"]);
+
+function Car(make, model, year, color){
+
+	this.make = make;
+	this.model = model;
+	this.year = year;
+	this.color = color;
+
+	this.accel = function () { console.log("vroom vroom");};
+}
+
+newCar = new Car("Lexus", "LFA", 2014, "dark grey");
+newCar.accel();
+
+console.log("")
+
+anotherNewCar = new Car("BMW", "I8", 2016, "black");
+anotherNewCar.accel();
