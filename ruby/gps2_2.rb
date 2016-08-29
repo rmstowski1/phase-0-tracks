@@ -69,12 +69,9 @@ def update_quantity(list_name, item_name, new_num)
 end
 
 def print_list(list_name)
-	 num = 0
-	 until num == list_name.length+4
-	 puts "#{list_name[:item_name][num]}, qty: #{list_name[:item_quant][num]}"
-	 num +=1
-	 end
-	 list_name
+	list_name.each { |key, value|
+	 puts "#{key}, qty: #{value}"
+	}
 end
 
 groc_list = make_list
