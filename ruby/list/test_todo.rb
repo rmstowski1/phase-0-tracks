@@ -7,7 +7,9 @@ class TodoList
 		p @chore_arr
 	end
 
-	def add_item(item)
+	def add_item(new_item)
+		@chore_arr << new_item
+		p @chore_arr
 	end
 
 	def delete_item(item)
@@ -17,5 +19,6 @@ class TodoList
 	def get_item(x)
 	end
 end
+
 
 
