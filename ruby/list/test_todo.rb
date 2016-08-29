@@ -18,8 +18,10 @@ class TodoList
 	end
 
 	def get_item(x)
+		p @chore_arr[x]
 	end
 end
+
 
 
 
