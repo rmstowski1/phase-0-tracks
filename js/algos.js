@@ -9,6 +9,13 @@
 			- return true
 		- Else
 			- return false
+
+	- define a function that takes in an integer for length
+		- declare blank array
+		- for loop for as many times as the taken in integer
+			- generate random number for length of string
+			- generate random string of random length and load into array
+		-  return array
 */
 
 
@@ -36,11 +43,31 @@ function compare_obj(object1, object2){
 		}
 }
 
-word = longest_word(["long phrase", "longest phrase", "longer phrase"]);
-console.log("The longest string is: " + word);
+function create_array(num_of_str){
+	new_arr = [];
+	for(var i = 0; i < num_of_str; i++){
+		rand_num = Math.floor((Math.random()*10) + 1);
+		rand_str = Math.random().toString(36).substr(2, rand_num);
+		new_arr.push(rand_str)
+	}
+	return new_arr;
+}
+
+long_word = longest_word(["long phrase", "longest phrase", "longer phrase"]);
+console.log("The longest string is: " + long_word);
+
+console.log("---------------------");
 
 have_a_match = compare_obj({name: "Steven", age: 54}, {name: "Tamir", age:54});
-console.log(have_a_match);
+console.log("---------------------");
+console.log("Matching key or value?: " + have_a_match);
+
+console.log("---------------------");
+
+rand_arr = create_array(4);
+console.log(rand_arr);
+
+
 
 
 
