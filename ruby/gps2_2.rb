@@ -31,11 +31,11 @@ def make_list
 	puts "Create a new list separated by spaces:"
 	new_list = gets.chomp
 	list_arr = new_list.split(' ')
-	list_hash = {item_name: list_arr, item_quant: []}
+	list_hash = {}
 	
 	quantity = 0
 	list_arr.each do |i|
-		list_hash[:item_quant] << quantity
+		list_hash[i] = quantity
 	end
 	list_hash
 end
@@ -97,7 +97,7 @@ print_list(groc_list)
 puts "-----------------------------------------"
 
 groc_list = delete_item(groc_list, "Lemonade")
-print_list(groc_list)
+print_list(groc_list) 
 
 
 #What did you learn about pseudocode from working on this challenge?
