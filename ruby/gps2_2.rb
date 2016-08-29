@@ -46,15 +46,7 @@ def add_item(list_name, item_name, new_num)
 end
 
 def delete_item(list_name, item_name)
-	num = 0
-	until num == list_name.length+5
-		if list_name[:item_name][num] == item_name
-			list_name[:item_name][num] = " "
-			list_name[:item_quant][num] = 0
-		end
-		num +=1
-	end
-	list_name
+	list_name.delete_if { |key, value| key == item_name}
 end
 
 def update_quantity(list_name, item_name, new_num)
@@ -88,12 +80,12 @@ print_list(groc_list)
 puts "-----------------------------------------"
 
 /groc_list = update_quantity(groc_list, "Ice Cream", 2)
-print_list(groc_list)
+print_list(groc_list) */
 
 puts "-----------------------------------------"
 
 groc_list = delete_item(groc_list, "Lemonade")
-print_list(groc_list) */
+print_list(groc_list)
 
 
 #What did you learn about pseudocode from working on this challenge?
