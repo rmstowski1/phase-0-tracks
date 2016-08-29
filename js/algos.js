@@ -64,8 +64,11 @@ console.log("Matching key or value?: " + have_a_match);
 
 console.log("---------------------");
 
-rand_arr = create_array(4);
-console.log(rand_arr);
+for(var i = 0; i < 10; i++){
+	rand_arr = create_array(4);
+	console.log(rand_arr);
+	console.log(longest_word(rand_arr));
+}
 
 
 
