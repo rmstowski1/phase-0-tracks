@@ -3,8 +3,8 @@ class TodoList
 		@chore_arr = chore_arr
 	end
 
-	def get_items()
-		puts chore_arr
+	def get_items
+		p @chore_arr
 	end
 
 	def add_item(item)
@@ -17,4 +17,5 @@ class TodoList
 	def get_item(x)
 	end
 end
+
 
