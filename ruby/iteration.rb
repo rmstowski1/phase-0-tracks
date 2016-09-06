@@ -1,4 +1,3 @@
-
 def what
 	puts "what?"
 	3.times {yield}
@@ -13,7 +12,7 @@ fruits_array = ["apple", "orange", "pear"]
 p fruits_array
 
 fruits_array.each do |fruitname|
-	p fruitname
+	puts fruitname
 end
 
 p fruits_array
