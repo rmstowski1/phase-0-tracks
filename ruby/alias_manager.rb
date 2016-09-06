@@ -2,9 +2,8 @@
 	- define a method with 1 paramter(string)
 		- split string into an array
 			- use .reverse to swap first and last name
-			- use an array to lo
-
-
+			- change letters to next letter on ascii chart
+		-return new name
 */
 
 def letter_change(real_name)
@@ -124,23 +123,23 @@ def name_change(real_name)
 	changed_name = changed_letters.join('')
 end
 
+names_hash = {}
 
 x = 0
-
 while x = 0
 
-puts "Enter a name:"
-user_name = gets.chomp.to_s 
+puts "Enter a name: "
+full_name = gets.chomp
 
-if user_name === "quit"
+fake_name = name_change(full_name)
+
+if full_name == "quit"
 	break
 end
 
-if user_name != "quit"
-	names = {real_name: [user_name], new_name: [name_change(user_name)]}
-	names[:real_name] = user_name
-	names[:new_name] = name_change(user_name)
-end
+names_hash[:"#{full_name}"] = fake_name
 
 end
-	puts "#{names[:real_name]} is #{names[:new_name]}"
+
+names_hash.each {|key, value| puts "#{key} is actually known by #{value}" }
+
