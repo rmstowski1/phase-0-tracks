@@ -1,90 +1,95 @@
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
-  # split string into array
-  # load array into has
-  # set default quantity
-  # print the list to the console [can you use one of your other methods here?]
-# output: prints list
+  # create list
+  # set default quantity to 0
+  # print the list to the console [can you use one of your other methods here?] Yes
+# output: hash
 
 # Method to add an item to a list
 # input: item name and optional quantity
-# steps: Use << to load new item and quantity into existing hash
-# output: prints list
+# steps: store method to add item to list
+# output: print groc_list
 
 # Method to remove an item from the list
-# input: item name
-# steps: iterate through has to find equal item name and remove
-# output: prints list
+# input: list, item to be removed
+# steps: use delete_if
+# output: new list
 
 # Method to update the quantity of an item
-# input: item name and quantity
-# steps: iterate through the has to update item quantity
-# output: prints list
+# input: list, item, quantity
+# steps: access hash to update quant at key
+# output: new list
 
 # Method to print a list and make it look pretty
-# input: list to be printed
-# steps: iterate through has to print each value
-# output: prints list
+# input: list
+# steps: iterate through hash
+# output: full list
+
+# second_hash = {}
+# def make_list2(second_hash, item, quantity)
+# 	list_arr2 = item.split(' ')
+
+# 	list_arr2.each do |item|
+# 		second_hash[item] = 0
+# 	end
+# end
+
 
 def make_list
-	puts "Create a new list separated by spaces:"
+	puts "Enter a new list: "
 	new_list = gets.chomp
 	list_arr = new_list.split(' ')
 	list_hash = {}
-	
-	quantity = 0
+
+	quant = 0
 	list_arr.each do |i|
-		list_hash[i] = quantity
+	list_hash[i] = quant
 	end
+
 	list_hash
 end
 
-def add_item(list_name, item_name, new_num)
-	list_name[item_name] = new_num
+def add_item(list_name, item, new_quant) 
+	  if list_name.has_key?(item)
+	    list_name
+	  else
+	  	list_name[item] = new_quant
+	  end
+	  list_name
+end
+
+def remove_item(list_name, item)
+	list_name.delete(item)
 	list_name
 end
 
-def delete_item(list_name, item_name)
-	list_name.delete_if { |key, value| key == item_name}
-end
-
-def update_quantity(list_name, item_name, new_num)
-	list_name.each { |key, value|
-		if key == item_name
-			list_name[key] = new_num
-		end
-	}
-	list_name
+def update_quantity(list_name, item, quantity)
+	if list_name.has_key?(item)
+		list_name[item] += quantity
+	end
 end
 
 def print_list(list_name)
-	list_name.each { |key, value|
-	 puts "#{key}, qty: #{value}"
+	list_name.each {|key,value|
+		puts "#{key}; qty: #{value}"
 	}
 end
 
 groc_list = make_list
+
+puts " "
+
+add_item(groc_list, "Lemonade", 2)
+add_item(groc_list, "Tomatoe", 3)
+add_item(groc_list, "Onion", 1)
+add_item(groc_list, "Ice cream", 4)
+
+remove_item(groc_list, "Lemonade")
+
+update_quantity(groc_list, "Ice cream", 1)
+
 print_list(groc_list)
-
-puts "-----------------------------------------"
-
-groc_list == add_item(groc_list, "Lemonade", 2)
-groc_list == add_item(groc_list, "Tomatoes", 3)
-groc_list == add_item(groc_list, "Onions", 1)
-groc_list == add_item(groc_list, "Ice Cream", 4)
-print_list(groc_list)
-
-puts "-----------------------------------------"
-
-groc_list = update_quantity(groc_list, "Ice Cream", 2)
-print_list(groc_list)
-
-puts "-----------------------------------------"
-
-groc_list = delete_item(groc_list, "Lemonade")
-print_list(groc_list)
-
 
 #What did you learn about pseudocode from working on this challenge?
 /
