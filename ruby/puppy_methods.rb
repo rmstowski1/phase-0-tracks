@@ -42,13 +42,14 @@ class Basketball
 end
 
 x = 0
-while x < 10
+while x < 50
 
 instance_arr = []
 m_j = Basketball.new
 instance_arr << m_j
 
 instance_arr.each do |instance|
+  puts "MJs got the ball!"
   m_j.dribble
   m_j.shoot
 end
