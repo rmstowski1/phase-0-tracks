@@ -17,6 +17,6 @@ function reverse(string) {
 
 new_word = reverse("Hello");
 
-if (1 == 1) {
+if (2 == 2) {
 	console.log(new_word)
 }
